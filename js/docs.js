@@ -251,20 +251,55 @@ class DocsManager {
       if (codeBlock) {
         const text = codeBlock.textContent;
 
-        navigator.clipboard.writeText(text).then(() => {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<i class="fas fa-check"></i>';
-          button.style.color = 'var(--neon-green)';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i>';
+            button.style.color = 'var(--neon-green)';
 
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.style.color = '';
-          }, 2000);
-        }).catch(err => {
-          console.error('Failed to copy code:', err);
-        });
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.style.color = '';
+            }, 2000);
+          }).catch(err => {
+            console.error('Failed to copy code:', err);
+            this.fallbackCopyText(text, button);
+          });
+        } else {
+          this.fallbackCopyText(text, button);
+        }
       }
     };
+  }
+
+  // Fallback copy method for HTTP or unsupported browsers
+  fallbackCopyText(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        button.style.color = 'var(--neon-green)';
+
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.style.color = '';
+        }, 2000);
+      }
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+    } finally {
+      document.body.removeChild(textArea);
+    }
   }
 
   // Section Navigation

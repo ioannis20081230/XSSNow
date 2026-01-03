@@ -362,18 +362,52 @@ class PayloadsManager {
   }
 
   copyPayload(code, button) {
-    navigator.clipboard.writeText(code).then(() => {
-      const originalIcon = button.innerHTML;
-      button.innerHTML = '<i class="fas fa-check"></i>';
-      button.style.color = 'var(--neon-green)';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(() => {
+        const originalIcon = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        button.style.color = 'var(--neon-green)';
 
-      setTimeout(() => {
-        button.innerHTML = originalIcon;
-        button.style.color = '';
-      }, 1500);
-    }).catch(err => {
-      console.error('Failed to copy payload:', err);
-    });
+        setTimeout(() => {
+          button.innerHTML = originalIcon;
+          button.style.color = '';
+        }, 1500);
+      }).catch(err => {
+        console.error('Failed to copy payload:', err);
+        this.fallbackCopyText(code, button);
+      });
+    } else {
+      this.fallbackCopyText(code, button);
+    }
+  }
+
+  fallbackCopyText(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        const originalIcon = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        button.style.color = 'var(--neon-green)';
+
+        setTimeout(() => {
+          button.innerHTML = originalIcon;
+          button.style.color = '';
+        }, 1500);
+      }
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+    } finally {
+      document.body.removeChild(textArea);
+    }
   }
 
   bookmarkPayload(payload, button) {

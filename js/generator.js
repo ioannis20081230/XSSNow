@@ -450,10 +450,15 @@ class XSSPayloadGenerator {
   }
 
   copyPayloadItem(payload) {
-    navigator.clipboard.writeText(payload).then(() => {
-    }).catch(err => {
-      console.error('Failed to copy payload:', err);
-    });
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(payload).then(() => {
+      }).catch(err => {
+        console.error('Failed to copy payload:', err);
+        this.fallbackCopyText(payload);
+      });
+    } else {
+      this.fallbackCopyText(payload);
+    }
   }
 
   savePayloadItem(index) {
@@ -574,9 +579,36 @@ class XSSPayloadGenerator {
   }
 
   copyHistoryItem(payload) {
-    navigator.clipboard.writeText(payload).then(() => {
-      console.log('Payload copied from history');
-    });
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(payload).then(() => {
+        console.log('Payload copied from history');
+      }).catch(err => {
+        console.error('Failed to copy from history:', err);
+        this.fallbackCopyText(payload);
+      });
+    } else {
+      this.fallbackCopyText(payload);
+    }
+  }
+
+  fallbackCopyText(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      document.execCommand('copy');
+      console.log('Text copied using fallback method');
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+    } finally {
+      document.body.removeChild(textArea);
+    }
   }
 
   escapeHtml(text) {
